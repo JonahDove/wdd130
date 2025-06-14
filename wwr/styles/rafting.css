@@ -1,85 +1,125 @@
-:root {
-    --primary-colors: #8E9AAF;
-    --secondary-color: #CBC0D3;
-    --accent1-color: #EFD3D7;
-    --accent2-color: #FEEAFA;
-    --heading-font: "Roboto", sans-serif;
-    --body-font: "Lato", sans-serif;
-}
-
-header {
-
-
-    background-color: var(--primary-colors);
-    color: var(--accent2-color);
-
-
-}
-
-* {
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-
-}
-
-body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-}
-
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-
+    color: #333;
+    background-color: #f9f9f9;
 }
 
 h1,
 h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-colors);
+    color: #222;
+    text-align: center;
 }
 
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-
-}
-
-.socialmedia a {
+a {
     text-decoration: none;
+    color: #0056b3;
 }
 
-.hero {
-    position: relative;
+a:hover {
+    color: #003d80;
 }
 
-.hero img {
-    display: block;
-    width: 100%;
+/* Header Styling */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-bottom: 2px solid #ddd;
+}
+
+header .logo img {
+    width: 50px;
     height: auto;
 }
 
-
-h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
+header h1 {
+    margin: 0;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent1-color);
-    color: #fff;
-
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
 
-.hero article img {
-    float: right;
-    width: 125px;
+nav a {
+    padding: 0.5rem 1rem;
+    background-color: #0056b3;
+    color: #fff;
+    border-radius: 5px;
+}
+
+nav a.active {
+    background-color: #003d80;
+}
+
+/* History Section Styling */
+#history {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 1rem auto;
+    max-width: 800px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#history p {
+    margin-bottom: 1rem;
+}
+
+/* Adventures Section Styling */
+#adventures {
+    padding: 2rem;
+    background-color: #f4f4f4;
+}
+
+#adventures .adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+
+#adventures img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#adventures figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+footer .social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+footer img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
 }
